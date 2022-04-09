@@ -1,0 +1,102 @@
+/*
+css specificity
+header --> class (use multiple times) --> id (use once) --> style
+*/
+
+html {
+	height:100%;
+	width:70%;
+	margin: auto;
+}
+
+body {
+	height:100%;
+	width:70%;
+	margin: auto;
+	background-color: #f4e1d2;  /* a predefined html color name */
+}
+
+blockquote {
+  background: #f0f0f0;
+  border-left: 10px solid #f18973;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote:before {
+  color: #f18973;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.title {
+  color: #bc5a45;
+	text-align: center;
+	font-size: 40px;
+}
+
+.subtitle {
+  color: #f18973;
+	text-align: center;
+	font-size: 30px;
+	border: 2px solid #f18973;
+	border-radius: 10px;
+	width:100%;
+	background: #F2E9E2;
+}
+
+h3:hover {
+	color:#bc5a45;
+}
+
+.para {
+	background: #f4e1d2;
+	color: black;
+	margin-left: auto;
+  margin-right: auto;
+	padding: 5px 1px 5px 1px;
+}
+
+.center {
+	text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+	text-align: center;
+	max-width: 100%;
+}
+
+.left {
+	float: left;
+	max-width: 50%;
+	margin-right: 10px;
+}
+
+.right {
+	float: right;
+	max-width: 50%;
+	margin-left: 10px;
+}
+
+.leftdiv {
+	max-width: 49%;
+	float: left;
+}
+
+.rightdiv {
+	max-width: 49%;
+	float: right;
+}

@@ -1,0 +1,85 @@
+html, body {
+  height:100%;
+  width:100%;
+	margin: 0;
+  background-color: #C49557;
+	overflow: hidden;
+/*
+  background: url('../resources/red-light-green-light-bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+*/
+}
+
+/*
+@font-face {
+font-family: "Game-of-Squids";
+src: local("../assets/Game-of-Squids.otf") format("opentype"),
+local("../assets/Game-of-Squids.ttf") format("truetype");
+}
+*/
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  font-family: Helvetica, Arial, sans-serif;
+  height:100%;
+  width:100%;
+}
+
+.container > * {
+/*  background-color: #C49557;*/
+/*  padding: 1em;*/
+}
+
+.content {
+  min-height: 40%;
+}
+
+/* Select all elements where parent is a container */
+.container > * {
+/*  margin-bottom: 2%;*/
+}
+
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+/*    grid-gap: 2% 2%;*/
+    grid-template-rows: 0% auto 0%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 3;
+  }
+  .sidebar {
+    grid-row-end: span 2;
+  }
+  .content {
+    grid-column: 2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

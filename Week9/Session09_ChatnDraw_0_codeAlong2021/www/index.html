@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Use the require.js module loader, and tell it where our main JavaScript file is  -->
+        <script defer type="text/javascript" src="appscripts/main.js"> </script>
+        <title>All together</title>
+    </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        All together, now!
+      </header>
+
+      <nav class="sidebar">
+      <div>
+      	Chat box: <br>
+      	<textarea id="chatBox" cols="16" rows="16"></textarea>
+      </div>
+      
+      <div>
+      	Type: <br>
+      	<textarea id="typingBox" cols="16" rows="2"></textarea>
+      </div>
+      
+      </nav>
+
+      <article class="content" id="centerDiv" id="svgcanvasDiv">
+        <div id="svgcanvasDiv"> 
+            <div id="svgcanvas"> </div>  <!--  <article>   article  </article> -->
+        </div>
+      </article>
+
+      <!-- Ditto the previous note about <aside>. -->
+      <aside class="sidebar">
+        Controls<br>
+        <button type="button" id="clearbtn">Clear</button>
+        <br><br>
+        
+        <label>Hue</label>
+        <input type="range" min="0" max="1" step=".05" id="hue" class="mySlider">
+        <br><br>
+        
+        <label>Saturation</label>
+        <input type="range" min="0" max="1" step=".05" id="saturation" class="mySlider">
+        <br><br>
+        
+        <label>Lightness</label>
+        <input type="range" min="0" max="1" step=".05" id="lightness" class="mySlider">
+        <br><br>
+        
+        <label>Stroke</label>
+        <input type="range" min="1" max="10" step=".05" id="stroke">
+        
+      </aside>
+
+      <footer class="footer" id="myFooter">
+
+      </footer>
+
+    </div>
+</html>
+
+
+

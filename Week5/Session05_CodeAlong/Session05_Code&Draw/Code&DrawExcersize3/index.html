@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <title>grid layout</title>
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Include the main.js file with our own javascript code -->
+        <script defer type="text/javascript" src="appscripts/main.js">
+        </script>
+    </head>
+
+  <body>
+    
+    <div class="container">
+      <header class="header" id="headerid">
+        <p>header</p>
+      </header>
+
+      <!-- Replace <div> with <aside> if your content has one aside. For more than one, nest <aside> elements in the <div>. -->
+      <nav class="sidebar">
+        <p>NAV</p>
+      </nav>
+
+      <!-- assign3: must have id to retreive from javascript -->
+      <article class="content" id="centerDiv">
+     </article>
+
+      <!-- Ditto the previous note about <aside>. -->
+      <aside class="sidebar" id="aside"> <!-- assign3: must have id -->
+        <p>ASIDE</p>
+        <input type="button" value="clear" id="clearButton"> <br>
+        <label for="slider1" class="label">slider 1</label>
+        <input id="slider1" type="range" min="0" max="1" step="0.05" value=".5"> 
+      </aside>
+
+      <footer class="footer">
+        <p>footer</p>
+      </footer>
+    </div>
+  
+
+  </body>
+</html>
+

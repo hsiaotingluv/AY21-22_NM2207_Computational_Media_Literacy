@@ -1,0 +1,21 @@
+/* Ref:  http://www.w3schools.com/css/css_syntax.asp */
+
+body { /* Matches elements with id=SimpleDive */
+	background-color:black;
+}
+
+h3 { /* Matches elements with h3 tag */
+	color: white;
+}
+
+#SimpleDiv { /* Matches element with id=SimpleDiv */
+	background-color: gray;
+	
+	/* color: #RRGGBB in hex ([0..9,A..F]) */
+	color: #FF00FF;
+
+
+	border-style: solid groove;
+    border-width: 5px;
+	border-color: green;
+}

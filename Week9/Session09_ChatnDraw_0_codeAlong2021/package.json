@@ -1,0 +1,16 @@
+{
+  "name": "testio",
+  "version": "1.0.0",
+  "description": "If you are getting socketio errors when you run your server or your client code, try changing this line in your server code (multiServerExpress.js) from:",
+  "main": "multiServerExpress.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
