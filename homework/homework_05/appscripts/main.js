@@ -99,6 +99,7 @@ button.addEventListener("click", function(ev){
 	}
 })
 
+
 let circle = paper.circle(300, 290, 8).attr({ // cx, cy, r
 	"fill" : "grey",
 });
