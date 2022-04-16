@@ -85,6 +85,7 @@ var timeLeft = fixGameTime; // time left throughout the game
 const gameSong_rlgl = new Audio('./audio/red-light-green-light-bg.mp3');
 const killSong_rlgl = new Audio('./audio/gun-shot.mp3');
 const winSong_rlgl = new Audio('./audio/Way-Back-then_Squid-Game-OST.mp3');
+const rlglSongs = [gameSong_rlgl, killSong_rlgl, winSong_rlgl];
 
 //============================================================
 // Declare the variables needed for the game
@@ -554,7 +555,7 @@ let init_rlgl = function() {
     "fill" : "url('./resources/red-light-green-light-not-looking.png')",
 		"stroke" : colorTheme_rlgl.green
   });
-	gameSong_rlgl.playbackRate = 1;
+	rlglSongs[0].playbackRate = 1;
 
   startButton_rlgl.show();
   startText_rlgl.show();
@@ -620,9 +621,9 @@ function startGame_rlgl() {
 	bg.attr({
   	"src" : "./resources/red-light-green-light-bg.png"
 	});
-	gameSong_rlgl.currentTime = 0;
-  gameSong_rlgl.play();
-  gameSong_rlgl.onended = function() {
+	rlglSongs[0].currentTime = 0;
+  rlglSongs[0].play();
+  rlglSongs[0].onended = function() {
     gameState = GameStateEnum.RED;
     const redLightDuration = (Math.random() * 1000) + 500; // 0.5 to 1.5 seconds
     killerRobot.attr({
@@ -639,12 +640,12 @@ function startGame_rlgl() {
 				"stroke" : colorTheme_rlgl.green
       })
       
-      const newSongSpeed = gameSong_rlgl.playbackRate + Math.random()*playBackRateMultiplier;
+      const newSongSpeed = rlglSongs[0].playbackRate + Math.random()*playBackRateMultiplier;
 			// max song speed cap at maxPlayBackRate
-      gameSong_rlgl.playbackRate = newSongSpeed > maxPlayBackRate ? maxPlayBackRate : newSongSpeed;
+      rlglSongs[0].playbackRate = newSongSpeed > maxPlayBackRate ? maxPlayBackRate : newSongSpeed;
  
-			gameSong_rlgl.currentTime = 0;
-      gameSong_rlgl.play();
+			rlglSongs[0].currentTime = 0;
+      rlglSongs[0].play();
 
     }, redLightDuration);
   };
@@ -654,7 +655,7 @@ function startGame_rlgl() {
 // Show end screen
 function showEndScreen_rlgl() {
   player.pause(); // stop any animation of player
-  gameSong_rlgl.pause(); // stop any gameSong that is still playing
+  rlglSongs[0].pause(); // stop any gameSong that is still playing
   clearInterval(countdownInterval);
 
 	// hide 
@@ -667,14 +668,14 @@ function showEndScreen_rlgl() {
 		bg.attr({
   		"src" : "./resources/red-light-green-light-win-screen.png"
 		});
-    winSong_rlgl.play();
+    rlglSongs[2].play();
 		continueButton_rlgl.show();
 		continueText_rlgl.show();
   } else if (gameState ==  GameStateEnum.LOSE) {
 		bg.attr({
   		"src" : "./resources/red-light-green-light-lose-screen.png"
 		});
-    killSong_rlgl.play();
+    rlglSongs[1].play();
 		replayText.show();
 		replayButton.show();
   }
